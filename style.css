@@ -1,0 +1,46 @@
+/*
+ Theme Name:   Neve Child
+ Theme URI:
+ Description:  Sapling Theme for Oregon State University. Suitable for blogs and microsites.
+ Author:       Kelly Holcomb
+ Author URI:   http://example.com
+ Template:     neve
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  nevechild
+*/
+
+/*adds spacing between logo and site title*/
+.hide-on-mobile .nv-title-tagline-wrap {
+    margin-left: 30px;
+}
+
+/*fix for menu dropdowns so they are left aligned*/
+.row .primary-menu-ul .sub-menu {
+    left: 0;
+    right: auto!important;
+   }
+
+.row .primary-menu-ul .sub-menu li a{
+    justify-content: flex-start!important;
+}
+
+/*adds underlines to the footer links*/
+#site-footer a {
+    text-decoration: underline;
+}
+
+/*MOBILE STYLES*/
+.hide-on-desktop .site-title {
+        font-size: 1em!important;
+    }
+
+.hide-on-desktop .site-logo .title-with-logo {
+    flex-wrap: wrap;
+}
+
+.hide-on-desktop .title-with-logo img {
+    margin-bottom: 20px;
+}

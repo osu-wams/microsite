@@ -1,0 +1,18 @@
+{
+  "name": "osu-wams/sapling",
+  "description": "A theme for Oregon State University that is well suited for a blogs and microsites",
+  "minimum-stability": "stable",
+  "license": "GPL-2.0-or-later",
+  "type": "wordpress-theme",
+  "authors": [
+    {
+      "name": "Web and Mobile Services",
+      "email": "digital.marketing@oregonstate.edu"
+    }
+  ],
+  "require": {
+  },
+  "require-dev": {
+  }
+}
+
