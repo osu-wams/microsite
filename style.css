@@ -1,7 +1,7 @@
 /*
  Theme Name:   Sapling
  Theme URI:
- Description:  Sapling Theme for Oregon State University. Suitable for blogs and microsites.
+ Description:  Sapling Theme for Oregon State University. Ideal for using as a microsite and showing off portfolio work
  Author:       Kelly Holcomb
  Author URI:   http://example.com
  Template:     koji
@@ -12,35 +12,208 @@
  Text Domain:  sapling
 */
 
-/*adds spacing between logo and site title*/
-.hide-on-mobile .nv-title-tagline-wrap {
-    margin-left: 30px;
+/*
+FONT
+*/
+
+@font-face {
+    font-family: 'Stratum2WebBold';
+    src: url('fonts/Stratum2WebBold.woff2') format('woff2'),
+        url('fonts/Stratum2WebBold.woff') format('woff'),
+        url('fonts/Stratum2WebBold.svg#Stratum2-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
-/*fix for menu dropdowns so they are left aligned*/
-.row .primary-menu-ul .sub-menu {
-    left: 0;
-    right: auto!important;
-   }
+/*
+VARIABLES
+*/
 
-.row .primary-menu-ul .sub-menu li a{
-    justify-content: flex-start!important;
+:root {
+    --beaver-orange: #d73f09;
+    --paddletail-black: #000;
+    --bucktooth-white: #fff;
+    --pine-stand: #4A773C;
+    --high-tide: #00859B;
+    --luminance: #FFB500;
+    --stratosphere: #006A8E;
+    --reindeer-moss: #C4D6A4;
+    --seafoam: #B8DDE1;
+    --candela: #FDD26E;
+    --moondust: #C6DAE7;
+    --hop-bine: #AA9D2E;
+    --rogue-wave: #0D5257;
+    --solar-flare: #D3832B;
+    --star-canvas: #003B5C;
+    --till: #B7A99A;
+    --coastline: #A7ACA2;
+    --high-desert: #7A6855;
+    --crater: #8E9089;
 }
 
-/*adds underlines to the footer links*/
-#site-footer a {
-    text-decoration: underline;
+body {
+    background-color: #f7f5f5;
+    color: #1F1D1C;
+    font-family: 'Open Sans', sans-serif;
 }
 
-/*MOBILE STYLES*/
-.hide-on-desktop .site-title {
-        font-size: 1em!important;
+body * {
+    /*the theme sets the word-break property to a depcrated "break-word" value. set to normal.*/
+    word-break: normal;
+}
+
+::selection {
+    background-color: var(--beaver-orange);
+}
+
+/*
+HEADER STYLES
+*/
+
+/*max logo size*/
+.header-top img {
+    max-width: 200px;
+}
+
+/*logo wrapper styles. must be grid to place the site title below the logo. the site logo, title, and the button for the mobile menu are all direct children of the site-header*/
+.header-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-top img {
+    margin-bottom: 2rem;
+}
+
+p.site-description {
+    color: var(--beaver-orange);
+}
+
+/*places the site title below the logo and takes up the full width*/
+.site-title {
+    grid-column: 1/-1;
+    grid-row-start: 2;
+    font-weight: 600;
+}
+
+/*all links in the site header container will change to orange on hover*/
+#site-header a:hover {
+    color: var(--beaver-orange);
+}
+
+/*font for site title on archive page, which if set to be the homepage, becomes an H1*/
+h1.site-title {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*styles for the load more button at the bottom of the archive page, any input button*/
+button#load-more, button, .faux-button, input[type="button"], input[type="reset"], input[type="submit"] {
+    background-color: var(--beaver-orange);
+}
+
+/*
+HEADINGS
+*/
+
+#site-content h1 {
+    color: var(--beaver-orange);
+    font-family: "Stratum2WebBold", sans-serif;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+h3,
+h5 {
+    color: var(--beaver-orange);
+}
+
+/*
+LINK STYLES
+*/
+
+/*changes color of the title of link to blog post on archive page and links in the body of a post*/
+.preview-title a,
+.entry-content a {
+    color: var(--beaver-orange);
+}
+
+.preview-title a:hover,
+.entry-content a:hover {
+    color:#1F1D1C;
+}
+
+/*HTML TAGS*/
+
+blockquote {
+    border-color: var(--beaver-orange);
+    border-left-width: 3px;
+}
+
+thead {
+    background-color: var(--beaver-orange);
+    color: var(--bucktooth-white);
+}
+
+tbody > tr:nth-child(2n) {
+    background-color: #F7F5F5;
+}
+
+/*removes odd border from table header*/
+th {
+    border: none;
+}
+
+/*PREVIOUS AND NEXT BLOG POSTS*/
+
+.pagination-single a {
+    color: var(--beaver-orange);
+}
+
+.pagination-single .arrow {
+    background-color: #F7F5F5;
+}
+
+/*PAGINATION WITHIN A BLOG POST*/
+
+p.post-nav-links {
+    background: #F7F5F5;
+    color: #1F1D1C;
+}
+
+/*
+MEDIA QUERIES
+*/
+
+/*setting max width of the logo starting at 330px to avoid overflow of the header*/
+@media (min-width:330px) {
+    #site-header img {
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    /*logo and site title layout*/
+    .header-top.section-inner {
+        display: flex;
+        flex-wrap: wrap;
     }
 
-.hide-on-desktop .site-logo .title-with-logo {
-    flex-wrap: wrap;
+    h1 {
+        font-size: 4.75rem;
+    }
 }
 
-.hide-on-desktop .title-with-logo img {
-    margin-bottom: 20px;
+@media (min-width: 1500px) {
+    /*changing max-width on larger screens to be a more a bit wider. default was too narrow*/
+    .post-inner {
+        max-width: 75rem;
+    }
 }
