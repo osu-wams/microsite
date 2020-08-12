@@ -192,6 +192,18 @@ MEDIA QUERIES
     }
 }
 
+/*makes the search overlay not cut off*/
+@media (min-width: 375px){
+    .search-overlay .search-field {
+        width: 27rem;
+    }
+}
+@media (min-width: 600px){
+    .search-overlay .search-field {
+        width: 36rem;
+    }
+}
+
 @media (min-width: 768px) {
     h1 {
         font-size: 3rem;
