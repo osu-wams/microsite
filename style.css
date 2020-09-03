@@ -52,10 +52,16 @@ VARIABLES
     --crater: #8E9089;
 }
 
+
+
 body {
     background-color: #f7f5f5;
     color: #1F1D1C;
     font-family: 'Open Sans', sans-serif;
+}
+
+body.custom-background {
+    background-color: #f7f5f5!important;
 }
 
 body * {
