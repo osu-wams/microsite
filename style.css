@@ -79,7 +79,7 @@ HEADER STYLES
 
 /*max logo size*/
 .header-top img {
-    max-width: 200px;
+    height: 65px;
 }
 
 /*logo wrapper styles. must be grid to place the site title below the logo. the site logo, title, and the button for the mobile menu are all direct children of the site-header*/

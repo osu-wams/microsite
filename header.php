@@ -44,13 +44,13 @@ if ( function_exists( 'wp_body_open' ) ) {
 
             elseif ( is_front_page() || is_home() ) : ?>
 
-                <a href="https://oregonstate.edu/" class=""><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.png"
+                <a href="https://oregonstate.edu/" class=""><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.svg"
                                                         alt="Oregon State University"></a><h1 class="site-title"><a
                             href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<?php else : ?>
 
-                <a href="https://oregonstate.edu/"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.png"
+                <a href="https://oregonstate.edu/"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.svg"
                                                         alt="Oregon State University"></a><p class="site-title"><a
                             href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></p>
 
