@@ -9,11 +9,11 @@ $html_class = is_admin_bar_showing() ? ' showing-admin-bar' : ''; ?>
 
 <head>
 
-    <meta http-equiv="content-type" content="<?php bloginfo( 'html_type' ); ?>"
-          charset="<?php bloginfo( 'charset' ); ?>"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="content-type" content="<?php bloginfo( 'html_type' ); ?>"
+		  charset="<?php bloginfo( 'charset' ); ?>"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 
@@ -29,12 +29,12 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 <div id="site-wrapper">
 
-    <header id="site-header" role="banner">
+	<header id="site-header" role="banner">
 
-        <a class="skip-link" href="#site-content"><?php _e( 'Skip to the content', 'koji' ); ?></a>
-        <a class="skip-link" href="#main-menu"><?php _e( 'Skip to the main menu', 'koji' ); ?></a>
+		<a class="skip-link" href="#site-content"><?php _e( 'Skip to the content', 'koji' ); ?></a>
+		<a class="skip-link" href="#main-menu"><?php _e( 'Skip to the main menu', 'koji' ); ?></a>
 
-        <div class="header-top section-inner">
+		<div class="header-top section-inner">
 
 			<?php
 
@@ -42,93 +42,99 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 				koji_custom_logo();
 
-            elseif ( is_front_page() || is_home() ) : ?>
+			elseif ( is_front_page() || is_home() ) :
+				?>
 
-                <a href="https://oregonstate.edu/" class=""><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.svg"
-                                                        alt="Oregon State University"></a><h1 class="site-title"><a
-                            href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+				<a href="https://oregonstate.edu/" class=""><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo.svg"
+														alt="Oregon State University"></a><h1 class="site-title"><a
+							href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<?php else : ?>
 
-                <a href="https://oregonstate.edu/"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.svg"
-                                                        alt="Oregon State University"></a><p class="site-title"><a
-                            href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></p>
+				<a href="https://oregonstate.edu/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/logo.svg"
+														alt="Oregon State University"></a><p class="site-title"><a
+							href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></p>
 
 			<?php endif; ?>
 
-            <button type="button" aria-pressed="false" class="toggle nav-toggle"
-                    data-toggle-target=".mobile-menu-wrapper" data-toggle-scroll-lock="true" data-toggle-attribute="">
-                <label>
-                    <span class="show"><?php _e( 'Menu', 'koji' ); ?></span>
-                    <span class="hide"><?php _e( 'Close', 'koji' ); ?></span>
-                </label>
-                <div class="bars">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div><!-- .bars -->
-            </button><!-- .nav-toggle -->
+			<button type="button" aria-pressed="false" class="toggle nav-toggle"
+					data-toggle-target=".mobile-menu-wrapper" data-toggle-scroll-lock="true" data-toggle-attribute="">
+				<label>
+					<span class="show"><?php _e( 'Menu', 'koji' ); ?></span>
+					<span class="hide"><?php _e( 'Close', 'koji' ); ?></span>
+				</label>
+				<div class="bars">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div><!-- .bars -->
+			</button><!-- .nav-toggle -->
 
-        </div><!-- .header-top -->
+		</div><!-- .header-top -->
 
-        <div class="header-inner section-inner">
+		<div class="header-inner section-inner">
 
-            <div class="header-inner-top">
+			<div class="header-inner-top">
 
 				<?php if ( get_bloginfo( 'description' ) ) : ?>
 
-                    <p class="site-description"><?php echo wp_kses_post( get_bloginfo( 'description' ) ); ?></p>
+					<p class="site-description"><?php echo wp_kses_post( get_bloginfo( 'description' ) ); ?></p>
 
 				<?php endif; ?>
 
-                <ul class="site-nav reset-list-style" id="main-menu" role="navigation">
+				<ul class="site-nav reset-list-style" id="main-menu" role="navigation">
 					<?php
 					if ( has_nav_menu( 'primary-menu' ) ) {
-						wp_nav_menu( array(
-							'container'      => '',
-							'items_wrap'     => '%3$s',
-							'theme_location' => 'primary-menu',
-						) );
+						wp_nav_menu(
+							array(
+								'container'      => '',
+								'items_wrap'     => '%3$s',
+								'theme_location' => 'primary-menu',
+							)
+						);
 					} else {
-						wp_list_pages( array(
-							'container' => '',
-							'title_li'  => '',
-						) );
+						wp_list_pages(
+							array(
+								'container' => '',
+								'title_li'  => '',
+							)
+						);
 					}
 					?>
-                </ul>
+				</ul>
 
 				<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 
-                    <div class="sidebar-widgets">
+					<div class="sidebar-widgets">
 						<?php dynamic_sidebar( 'sidebar' ); ?>
-                    </div><!-- .sidebar-widgets -->
+					</div><!-- .sidebar-widgets -->
 
 				<?php endif; ?>
 
-            </div><!-- .header-inner-top -->
+			</div><!-- .header-inner-top -->
 
-            <div class="social-menu-wrapper">
+			<div class="social-menu-wrapper">
 
 				<?php
 
 				$disable_search   = get_theme_mod( 'koji_disable_search' ) ? get_theme_mod( 'koji_disable_search' ) : false;
 				$show_social_menu = has_nav_menu( 'social' ) || ! $disable_search;
 
-				if ( $show_social_menu ) : ?>
+				if ( $show_social_menu ) :
+					?>
 
-                    <ul class="social-menu reset-list-style social-icons s-icons">
+					<ul class="social-menu reset-list-style social-icons s-icons">
 
 						<?php if ( ! $disable_search ) : ?>
 
-                            <li class="search-toggle-wrapper">
-                                <button type="button" aria-pressed="false" data-toggle-target=".search-overlay"
-                                        data-set-focus=".search-overlay .search-field" class="toggle search-toggle">
-                                    <span class="screen-reader-text"><?php _e( 'Toggle the search field', 'koji' ); ?></span>
-                                </button>
-                            </li>
+							<li class="search-toggle-wrapper">
+								<button type="button" aria-pressed="false" data-toggle-target=".search-overlay"
+										data-set-focus=".search-overlay .search-field" class="toggle search-toggle">
+									<span class="screen-reader-text"><?php _e( 'Toggle the search field', 'koji' ); ?></span>
+								</button>
+							</li>
 
-						<?php
+							<?php
 						endif;
 
 						$social_menu_args = array(
@@ -148,102 +154,107 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 						?>
 
-                    </ul><!-- .social-menu -->
+					</ul><!-- .social-menu -->
 
 				<?php endif; ?>
 
-            </div><!-- .social-menu-wrapper -->
+			</div><!-- .social-menu-wrapper -->
 
-        </div><!-- .header-inner -->
+		</div><!-- .header-inner -->
 
-    </header><!-- #site-header -->
+	</header><!-- #site-header -->
 
-    <div class="mobile-menu-wrapper" aria-expanded="false">
+	<div class="mobile-menu-wrapper" aria-expanded="false">
 
-        <div class="mobile-menu section-inner">
+		<div class="mobile-menu section-inner">
 
-            <div class="mobile-menu-top">
+			<div class="mobile-menu-top">
 
 				<?php if ( get_bloginfo( 'description' ) ) : ?>
 
-                    <p class="site-description"><?php echo wp_kses_post( get_bloginfo( 'description' ) ); ?></p>
+					<p class="site-description"><?php echo wp_kses_post( get_bloginfo( 'description' ) ); ?></p>
 
 				<?php endif; ?>
 
-                <ul class="site-nav reset-list-style" id="mobile-menu" role="navigation">
+				<ul class="site-nav reset-list-style" id="mobile-menu" role="navigation">
 					<?php
 					if ( has_nav_menu( 'mobile-menu' ) ) {
-						wp_nav_menu( array(
-							'container'      => '',
-							'items_wrap'     => '%3$s',
-							'theme_location' => 'mobile-menu',
-						) );
+						wp_nav_menu(
+							array(
+								'container'      => '',
+								'items_wrap'     => '%3$s',
+								'theme_location' => 'mobile-menu',
+							)
+						);
 					} else {
-						wp_list_pages( array(
-							'container' => '',
-							'title_li'  => '',
-						) );
+						wp_list_pages(
+							array(
+								'container' => '',
+								'title_li'  => '',
+							)
+						);
 					}
 					?>
-                </ul>
+				</ul>
 
 				<?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
 
-                    <div class="sidebar-widgets">
+					<div class="sidebar-widgets">
 						<?php dynamic_sidebar( 'sidebar' ); ?>
-                    </div><!-- .sidebar-widgets -->
+					</div><!-- .sidebar-widgets -->
 
 				<?php endif; ?>
 
-            </div><!-- .mobile-menu-top -->
+			</div><!-- .mobile-menu-top -->
 
-            <div class="social-menu-wrapper">
+			<div class="social-menu-wrapper">
 
 				<?php if ( $show_social_menu ) : ?>
 
-                    <ul class="social-menu reset-list-style social-icons s-icons mobile">
+					<ul class="social-menu reset-list-style social-icons s-icons mobile">
 
 						<?php if ( ! $disable_search ) : ?>
 
-                            <li class="search-toggle-wrapper">
-                                <button type="button" aria-pressed="false" data-toggle-target=".search-overlay"
-                                        data-set-focus=".search-overlay .search-field" class="toggle search-toggle">
-                                    <span class="screen-reader-text"><?php _e( 'Toggle the search field', 'koji' ); ?></span>
-                                </button>
-                            </li>
+							<li class="search-toggle-wrapper">
+								<button type="button" aria-pressed="false" data-toggle-target=".search-overlay"
+										data-set-focus=".search-overlay .search-field" class="toggle search-toggle">
+									<span class="screen-reader-text"><?php _e( 'Toggle the search field', 'koji' ); ?></span>
+								</button>
+							</li>
 
-						<?php
+							<?php
 						endif;
 
-						wp_nav_menu( $social_menu_args ); ?>
+						wp_nav_menu( $social_menu_args );
+						?>
 
-                    </ul><!-- .social-menu -->
+					</ul><!-- .social-menu -->
 
 				<?php endif; ?>
 
-            </div><!-- .social-menu-wrapper -->
+			</div><!-- .social-menu-wrapper -->
 
-        </div><!-- .mobile-menu -->
+		</div><!-- .mobile-menu -->
 
-    </div><!-- .mobile-menu-wrapper -->
+	</div><!-- .mobile-menu-wrapper -->
 
 	<?php if ( ! $disable_search ) : ?>
 
-        <div class="search-overlay cover-modal" aria-expanded="false">
+		<div class="search-overlay cover-modal" aria-expanded="false">
 
-            <div class="section-inner search-overlay-form-wrapper">
+			<div class="section-inner search-overlay-form-wrapper">
 				<?php echo get_search_form(); ?>
-            </div><!-- .section-inner -->
+			</div><!-- .section-inner -->
 
-            <button type="button" class="toggle search-untoggle" data-toggle-target=".search-overlay"
-                    data-set-focus=".search-toggle:visible">
-                <div class="search-untoggle-inner">
-                    <img aria-hidden="true"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cross.svg"/>
-                </div>
-                <span class="screen-reader-text"><?php _e( 'Hide the search overlay', 'koji' ); ?></span>
-            </button><!-- .search-untoggle -->
+			<button type="button" class="toggle search-untoggle" data-toggle-target=".search-overlay"
+					data-set-focus=".search-toggle:visible">
+				<div class="search-untoggle-inner">
+					<img aria-hidden="true"
+						 src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/cross.svg"/>
+				</div>
+				<span class="screen-reader-text"><?php _e( 'Hide the search overlay', 'koji' ); ?></span>
+			</button><!-- .search-untoggle -->
 
-        </div><!-- .search-overlay -->
+		</div><!-- .search-overlay -->
 
 	<?php endif; ?>

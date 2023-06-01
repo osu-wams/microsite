@@ -17,13 +17,13 @@ FONT
 */
 
 @font-face {
-    font-family: 'Stratum2WebBold';
-    src: url('fonts/Stratum2WebBold.woff2') format('woff2'),
-        url('fonts/Stratum2WebBold.woff') format('woff'),
-        url('fonts/Stratum2WebBold.svg#Stratum2-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Stratum2WebBold';
+	src: url('fonts/Stratum2WebBold.woff2') format('woff2'),
+		url('fonts/Stratum2WebBold.woff') format('woff'),
+		url('fonts/Stratum2WebBold.svg#Stratum2-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 /*
@@ -31,46 +31,46 @@ VARIABLES
 */
 
 :root {
-    --beaver-orange: #d73f09;
-    --paddletail-black: #000;
-    --bucktooth-white: #fff;
-    --pine-stand: #4A773C;
-    --high-tide: #00859B;
-    --luminance: #FFB500;
-    --stratosphere: #006A8E;
-    --reindeer-moss: #C4D6A4;
-    --seafoam: #B8DDE1;
-    --candela: #FDD26E;
-    --moondust: #C6DAE7;
-    --hop-bine: #AA9D2E;
-    --rogue-wave: #0D5257;
-    --solar-flare: #D3832B;
-    --star-canvas: #003B5C;
-    --till: #B7A99A;
-    --coastline: #A7ACA2;
-    --high-desert: #7A6855;
-    --crater: #8E9089;
+	--beaver-orange: #d73f09;
+	--paddletail-black: #000;
+	--bucktooth-white: #fff;
+	--pine-stand: #4A773C;
+	--high-tide: #00859B;
+	--luminance: #FFB500;
+	--stratosphere: #006A8E;
+	--reindeer-moss: #C4D6A4;
+	--seafoam: #B8DDE1;
+	--candela: #FDD26E;
+	--moondust: #C6DAE7;
+	--hop-bine: #AA9D2E;
+	--rogue-wave: #0D5257;
+	--solar-flare: #D3832B;
+	--star-canvas: #003B5C;
+	--till: #B7A99A;
+	--coastline: #A7ACA2;
+	--high-desert: #7A6855;
+	--crater: #8E9089;
 }
 
 
 
 body {
-    background-color: #f7f5f5;
-    color: #1F1D1C;
-    font-family: 'Open Sans', sans-serif;
+	background-color: #f7f5f5;
+	color: #1F1D1C;
+	font-family: 'Open Sans', sans-serif;
 }
 
 body.custom-background {
-    background-color: #f7f5f5!important;
+	background-color: #f7f5f5!important;
 }
 
 body * {
-    /*the theme sets the word-break property to a depcrated "break-word" value. set to normal.*/
-    word-break: normal;
+	/*the theme sets the word-break property to a depcrated "break-word" value. set to normal.*/
+	word-break: normal;
 }
 
 ::selection {
-    background-color: var(--beaver-orange);
+	background-color: var(--beaver-orange);
 }
 
 /*
@@ -79,43 +79,43 @@ HEADER STYLES
 
 /*max logo size*/
 .header-top img {
-    height: 65px;
+	height: 65px;
 }
 
 /*logo wrapper styles. must be grid to place the site title below the logo. the site logo, title, and the button for the mobile menu are all direct children of the site-header*/
 .header-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 .header-top img {
-    margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 p.site-description {
-    color: var(--beaver-orange);
+	color: var(--beaver-orange);
 }
 
 /*places the site title below the logo and takes up the full width*/
 .site-title {
-    grid-column: 1/-1;
-    grid-row-start: 2;
-    font-weight: 600;
+	grid-column: 1/-1;
+	grid-row-start: 2;
+	font-weight: 600;
 }
 
 /*all links in the site header container will change to orange on hover*/
 #site-header a:hover {
-    color: var(--beaver-orange);
+	color: var(--beaver-orange);
 }
 
 /*font for site title on archive page, which if set to be the homepage, becomes an H1*/
 h1.site-title {
-    font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 /*styles for the load more button at the bottom of the archive page, any input button*/
 button#load-more, button, .faux-button, input[type="button"], input[type="reset"], input[type="submit"] {
-    background-color: var(--beaver-orange);
+	background-color: var(--beaver-orange);
 }
 
 /*
@@ -123,15 +123,15 @@ HEADINGS
 */
 
 #site-content h1 {
-    color: var(--beaver-orange);
-    font-family: "Stratum2WebBold", sans-serif;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
+	color: var(--beaver-orange);
+	font-family: "Stratum2WebBold", sans-serif;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 h3,
 h5 {
-    color: var(--beaver-orange);
+	color: var(--beaver-orange);
 }
 
 /*
@@ -141,50 +141,50 @@ LINK STYLES
 /*changes color of the title of link to blog post on archive page and links in the body of a post*/
 .preview-title a,
 .entry-content a {
-    color: var(--beaver-orange);
+	color: var(--beaver-orange);
 }
 
 .preview-title a:hover,
 .entry-content a:hover {
-    color:#1F1D1C;
+	color:#1F1D1C;
 }
 
 /*HTML TAGS*/
 
 blockquote {
-    border-color: var(--beaver-orange);
-    border-left-width: 3px;
+	border-color: var(--beaver-orange);
+	border-left-width: 3px;
 }
 
 thead {
-    background-color: var(--beaver-orange);
-    color: var(--bucktooth-white);
+	background-color: var(--beaver-orange);
+	color: var(--bucktooth-white);
 }
 
 tbody > tr:nth-child(2n) {
-    background-color: #F7F5F5;
+	background-color: #F7F5F5;
 }
 
 /*removes odd border from table header*/
 th {
-    border: none;
+	border: none;
 }
 
 /*PREVIOUS AND NEXT BLOG POSTS*/
 
 .pagination-single a {
-    color: var(--beaver-orange);
+	color: var(--beaver-orange);
 }
 
 .pagination-single .arrow {
-    background-color: #F7F5F5;
+	background-color: #F7F5F5;
 }
 
 /*PAGINATION WITHIN A BLOG POST*/
 
 p.post-nav-links {
-    background: #F7F5F5;
-    color: #1F1D1C;
+	background: #F7F5F5;
+	color: #1F1D1C;
 }
 
 /*
@@ -193,45 +193,45 @@ MEDIA QUERIES
 
 /*setting max width of the logo starting at 330px to avoid overflow of the header*/
 @media (min-width:330px) {
-    #site-header img {
-        max-width: 200px;
-    }
+	#site-header img {
+		max-width: 200px;
+	}
 }
 
 /*makes the search overlay not cut off*/
 @media (min-width: 375px){
-    .search-overlay .search-field {
-        width: 27rem;
-    }
+	.search-overlay .search-field {
+		width: 27rem;
+	}
 }
 @media (min-width: 600px){
-    .search-overlay .search-field {
-        width: 36rem;
-    }
+	.search-overlay .search-field {
+		width: 36rem;
+	}
 }
 
 @media (min-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
+	h1 {
+		font-size: 3rem;
+	}
 }
 
 @media (min-width: 1000px) {
 
-    /*logo and site title layout*/
-    .header-top.section-inner {
-        display: flex;
-        flex-wrap: wrap;
-    }
+	/*logo and site title layout*/
+	.header-top.section-inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-    h1 {
-        font-size: 4.75rem;
-    }
+	h1 {
+		font-size: 4.75rem;
+	}
 }
 
 @media (min-width: 1500px) {
-    /*changing max-width on larger screens to be a more a bit wider. default was too narrow*/
-    .post-inner {
-        max-width: 75rem;
-    }
+	/*changing max-width on larger screens to be a more a bit wider. default was too narrow*/
+	.post-inner {
+		max-width: 75rem;
+	}
 }
