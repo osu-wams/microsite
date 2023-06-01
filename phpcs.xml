@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="WP Theme">
+    <description>A custom set of rules to check for a WordPress project</description>
+    <file>.</file>
+    <arg name="extensions" value="php,css,module,inc,install,test,profile,theme,info,txt,md,yml"/>
+    <arg name="ignore" value="dist,node_modules,vendor,gulp.js"/>
+    <config name="minimum_supported_wp_version" value="4.9"/>
+    <rule ref="WordPress-Extra" />
+    <rule ref="WordPress-Docs"/>
+</ruleset>
