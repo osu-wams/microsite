@@ -154,7 +154,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 								</button>
 							</li>
 
-						<?php
+							<?php
 						endif;
 
 						$social_menu_args = array(
@@ -242,7 +242,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 								</button>
 							</li>
 
-						<?php
+							<?php
 						endif;
 
 						wp_nav_menu( $social_menu_args );
